@@ -1,0 +1,264 @@
+/* ==================== CSS Variables ==================== */
+:root {
+  /* Colors */
+  --color-primary: #1e40af;
+  --color-primary-light: #2563eb;
+  --color-danger: #dc2626;
+  --color-bg: #f5f5f5;
+  --color-white: white;
+  --color-border: #ccc;
+  --color-gray-light: #e5e7eb;
+  --color-gray: #6b7280;
+  --color-text: black;
+
+  /* Spacing */
+  --spacing-xs: 0.3rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 0.6rem;
+  --spacing-lg: 1rem;
+  --spacing-xl: 1.2rem;
+  --spacing-2xl: 1.5rem;
+  --spacing-3xl: 2rem;
+  --spacing-4xl: 5rem;
+
+  /* Border Radius */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 10px;
+}
+
+/* ==================== Base Styles ==================== */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: var(--color-bg);
+}
+
+.page {
+  padding: var(--spacing-2xl);
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: var(--spacing-4xl);
+}
+
+/* ==================== Navbar ==================== */
+.navbar {
+  background: var(--color-primary);
+  color: var(--color-white);
+  padding: var(--spacing-lg) var(--spacing-2xl);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-left,
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xl);
+}
+
+.logo {
+  margin: 0;
+}
+
+.navbar a {
+  color: var(--color-white);
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.be-tutor {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.icon {
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+}
+
+.icon:hover {
+  opacity: 0.8;
+}
+
+/* ==================== Form Controls ==================== */
+input,
+select,
+textarea {
+  padding: var(--spacing-md);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  font-size: 0.95rem;
+}
+
+input {
+  width: 250px;
+}
+
+textarea {
+  width: 300px;
+  min-height: 80px;
+  resize: vertical;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn {
+  background: var(--color-primary-light);
+  color: var(--color-white);
+  border: none;
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+.btn.danger {
+  background: var(--color-danger);
+}
+
+/* ==================== Layout ==================== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.card {
+  background: var(--color-white);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-md);
+}
+
+/* ==================== Search & Filters ==================== */
+.search {
+  width: 300px;
+  margin-bottom: var(--spacing-2xl);
+}
+
+.search-bar {
+  margin-bottom: var(--spacing-2xl);
+}
+
+.filters {
+  display: flex;
+  gap: var(--spacing-lg);
+  align-items: center;
+  margin-bottom: var(--spacing-2xl);
+  flex-wrap: wrap;
+}
+
+/* ==================== Tabs ==================== */
+.tabs {
+  display: flex;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-2xl);
+}
+
+.tab {
+  padding: var(--spacing-sm) var(--spacing-xl);
+  border: none;
+  border-radius: var(--radius-sm);
+  background: var(--color-gray-light);
+  cursor: pointer;
+}
+
+.tab.active {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+/* ==================== Actions ==================== */
+.actions {
+  display: flex;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-md);
+}
+
+/* ==================== Notifications ==================== */
+.notification {
+  background: var(--color-white);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-md);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  cursor: pointer;
+}
+
+.notification.unread {
+  font-weight: bold;
+}
+
+.notification.read {
+  opacity: 0.7;
+}
+
+.dot {
+  color: var(--color-primary);
+  font-size: 0.8rem;
+}
+
+/* ==================== Modal ==================== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  background: var(--color-white);
+  padding: var(--spacing-3xl);
+  border-radius: var(--radius-md);
+  text-align: center;
+}
+
+/* ==================== Profile ==================== */
+.profile-card {
+  background: var(--color-white);
+  padding: var(--spacing-3xl);
+  border-radius: var(--radius-lg);
+  max-width: 500px;
+  margin-top: var(--spacing-2xl);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--spacing-xl);
+}
+
+.form-group label {
+  font-weight: 500;
+  margin-bottom: var(--spacing-xs);
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-sm);
+}
+
+.char-count {
+  font-size: 0.8rem;
+  color: var(--color-gray);
+  margin-top: var(--spacing-xs);
+}
+
+/* ==================== Reviews ==================== */
+.stars {
+  margin: var(--spacing-lg) 0;
+}
