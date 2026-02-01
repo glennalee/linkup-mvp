@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getCurrentUser } from "../utils/auth";
+import { API_BASE_URL } from "../config";
 
-const USERS_API_URL = "http://localhost:5050/users";
+const USERS_API_URL = `${API_BASE_URL}/users`;
 
 export default function Navbar() {
   const [user, setUser] = useState(getCurrentUser());

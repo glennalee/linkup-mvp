@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { useNavigate, Navigate, Link } from "react-router-dom";
 import { getCurrentUser } from "../utils/auth";
+import { API_BASE_URL } from "../config";
+const USERS_API_URL = `${API_BASE_URL}/users`;
 
-const USERS_API_URL = "http://localhost:5050/users";
 
 export default function Login() {
   const [email, setEmail] = useState("");

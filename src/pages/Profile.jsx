@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { getCurrentUser } from "../utils/auth";
-
-const REVIEWS_API_URL = "http://localhost:5050/reviews";
+import { API_BASE_URL } from "../config";
+const REVIEWS_API_URL = `${API_BASE_URL}/reviews`;
 
 export default function Profile() {
   const user = getCurrentUser(); // { _id, name, email, role }

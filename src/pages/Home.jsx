@@ -2,7 +2,9 @@ import { useEffect, useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { getCurrentUser } from "../utils/auth";
 
-const TUTORS_API_URL = "http://localhost:5050/tutors";
+import { API_BASE_URL } from "../config";
+const TUTORS_API_URL = `${API_BASE_URL}/tutors`;
+
 
 export default function Home() {
   const navigate = useNavigate();

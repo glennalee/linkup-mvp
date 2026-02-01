@@ -1,9 +1,9 @@
 import { useEffect, useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { getCurrentUser } from "../utils/auth";
-
-const BOOKINGS_API_URL = "http://localhost:5050/bookings";
-const REVIEWS_API_URL = "http://localhost:5050/reviews";
+import { API_BASE_URL } from "../config";
+const BOOKINGS_API_URL = `${API_BASE_URL}/bookings`;
+const REVIEWS_API_URL = `${API_BASE_URL}/reviews`;
 
 export default function MyBookings() {
   const user = getCurrentUser();

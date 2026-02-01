@@ -3,8 +3,9 @@ import { useNavigate, useParams } from "react-router-dom";
 import Modal from "../components/Modal";
 import { getCurrentUser } from "../utils/auth";
 
-const TUTORS_API_URL = "http://localhost:5050/tutors";
-const BOOKINGS_API_URL = "http://localhost:5050/bookings";
+import { API_BASE_URL } from "../config";
+const TUTORS_API_URL = `${API_BASE_URL}/tutors`;
+const BOOKINGS_API_URL = `${API_BASE_URL}/bookings`;
 
 export default function BookSlot() {
   const { id: tutorProfileId } = useParams(); // /book/:id uses TutorProfile _id

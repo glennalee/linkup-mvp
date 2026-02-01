@@ -1,8 +1,9 @@
 import { useEffect, useMemo, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
-const TUTORS_API_URL = "http://localhost:5050/tutors";
-const REVIEWS_API_URL = "http://localhost:5050/reviews";
+import { API_BASE_URL } from "../config";
+const TUTORS_API_URL = `${API_BASE_URL}/tutors`;
+const REVIEWS_API_URL = `${API_BASE_URL}/reviews`;
 
 export default function TutorProfile() {
   const { id: tutorProfileId } = useParams(); // THIS IS TutorProfile._id

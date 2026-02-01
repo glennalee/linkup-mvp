@@ -2,9 +2,10 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { getCurrentUser } from "../utils/auth";
 import StarRating from "../components/StarRating";
+import { API_BASE_URL } from "../config";
+const REVIEWS_API_URL = `${API_BASE_URL}/reviews`;
+const BOOKINGS_API_URL = '${API_BASE_URL}/bookings';
 
-const BOOKINGS_API = "http://localhost:5050/bookings";
-const REVIEWS_API = "http://localhost:5050/reviews";
 
 export default function Reviews() {
   const { bookingId } = useParams();
